@@ -33,15 +33,40 @@ class HomeActivity extends StatelessWidget{
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("My Profile"),
-        backgroundColor: Colors.amber,
+        centerTitle: true,
+        title: Text("Need Blod"),
+        backgroundColor: Colors.deepOrange,
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.add)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.settings_rounded)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.call))
+
         ],
       ),
 
+
+      body: Container(
+    margin:  EdgeInsets.all(150),
+    child: Center(
+        child: Column(
+          children: [
+            CircleAvatar(
+
+              radius: 70,
+          backgroundColor: Colors.black26,
+          child: IconButton(onPressed: (){}, icon: Icon(Icons.bloodtype_sharp, color: Colors.deepOrange),
+            iconSize: 80,
+
+
+            )
+
+            ),
+            Text("Donate Blood",
+              style: TextStyle(fontSize: 25),
+            ),
+          ],
+        ),
+      ),
+
+      )
     );
 
   }
